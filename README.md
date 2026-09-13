@@ -68,7 +68,7 @@ It helps travellers search, compare and reserve **buses, trains and flights** th
 - Departure and arrival details
 - Fare comparison
 
-### 💺 Booking Experience
+# 💺 Booking Experience
 
 TravelGo provides a complete website reservation journey:
 
@@ -92,8 +92,8 @@ QR / PDF
 Dashboard
    ↓
 Cancellation
-
-##Features include:
+```text
+Features include:
 Interactive seat selection
 Passenger details
 Checkout
@@ -102,8 +102,7 @@ QR code generation
 PDF reservation generation
 Dashboard
 Reservation cancellation
-
-### 🗺️ Interactive India Map
+🗺️ Interactive India Map
 Interactive India route explorer
 Leaflet-powered map
 React Leaflet integration
@@ -111,9 +110,7 @@ OpenStreetMap tiles
 Geographic latitude/longitude based city markers
 Route visualisation
 Bus, train and flight route differentiation
-
 Major destinations represented include:
-
 Srinagar
 Amritsar
 Delhi
@@ -182,21 +179,30 @@ Air India Express IX2173
 IndiGo 6E6480
 
 Travel fares, schedules and availability can change continuously. The displayed information should therefore be treated as public/reference snapshots rather than guaranteed live inventory.
+
 🗺️ India Route Explorer
+
 The map is built using:
+
 Leaflet
 React Leaflet
 OpenStreetMap
 Geographic latitude/longitude coordinates
+
 Travel routes are visually differentiated by travel type:
+
 🚌 Bus
 🚆 Train
 ✈️ Flight
+
 The map uses geographic coordinates rather than manually positioned screen coordinates, allowing city markers to remain aligned with their actual locations.
+
 OpenStreetMap attribution is displayed within the map interface.
+
 🎨 User Experience
 
 TravelGo is designed around a modern Indian travel experience with:
+
 🇮🇳 Indian travel identity
 📱 Mobile-first responsive layout
 💻 Desktop support
@@ -207,9 +213,10 @@ TravelGo is designed around a modern Indian travel experience with:
 ⚖️ Easy comparison
 💺 Guided booking flow
 🎯 Clean travel-focused interface
-
 🧰 TravelGo Tools
+
 The platform includes supporting travel utilities and experiences such as:
+
 Travel search
 Route exploration
 Trip comparison
@@ -220,9 +227,7 @@ Search history
 Favourite trips
 Dashboard
 Reservation management
-
 🛠️ Tech Stack
-
 Frontend
 Next.js 15
 React 19
@@ -230,33 +235,26 @@ TypeScript
 Tailwind CSS
 Framer Motion
 Lucide React
-
 Backend
 Next.js API Routes
 Prisma ORM
 PostgreSQL-ready architecture
 NextAuth authentication
-
 Maps
 Leaflet
 React Leaflet
 OpenStreetMap
-
 Forms & Validation
 React Hook Form
 Zod
-
 Data Visualisation
 Recharts
-
 Documents & QR
 pdf-lib
 QRCode
-
 Testing
 Vitest
 Playwright
-
 📂 Project Structure
 travelgo-india/
 │
@@ -310,29 +308,26 @@ cd Travelgo
 3. Install dependencies
 npm install
 4. Configure environment variables
+
 Create a local environment file:
 
 .env.local
 
 Configure the required environment variables for your local setup.
+
 Do not commit .env.local to GitHub.
 
 5. Start the development server
 npm run dev
 6. Open the application
 http://localhost:3000
-
 🧪 Testing
-
-Run the test suite:
+Run the test suite
 npm test
-
-Create a production build:
+Create a production build
 npm run build
-
-Start the application locally:
+Start the application locally
 npm run dev
-
 🔌 API Architecture
 
 TravelGo uses server-side API routes for application functionality including:
@@ -363,7 +358,6 @@ Authentication support
 Input validation with Zod
 Prisma database layer
 No payment credentials stored in the repository
-
 📊 Data & Reservation Disclaimer
 
 Public travel websites continuously change fares, schedules and availability.
@@ -381,6 +375,7 @@ For production-grade live search, live seat availability and real ticket booking
 TravelGo is designed for modern Next.js hosting environments.
 
 A typical production architecture can use:
+
 Next.js
    +
 PostgreSQL
@@ -390,6 +385,7 @@ Prisma
 Environment Variables
    +
 Authorised Travel APIs
+
 Before production deployment, configure the required:
 
 Database
@@ -399,6 +395,7 @@ Authorised travel provider integrations
 💡 Why TravelGo?
 
 TravelGo combines multiple parts of the Indian travel journey into one platform:
+
 Discover
    +
 Search
@@ -410,6 +407,7 @@ Choose
 Reserve
    +
 Manage
+
 Instead of switching between multiple travel websites, users can explore travel options through a single unified interface.
 
 ⭐ Project Highlights
@@ -428,7 +426,6 @@ API-ready architecture
 PostgreSQL + Prisma ready
 Automated testing support
 Production-oriented project structure
-
 👨‍💻 Author
 Abhishek Mishra
 
@@ -443,4 +440,5 @@ https://github.com/abhishek-mishra16/Travelgo
 ⭐ Support the Project
 
 If you find TravelGo India interesting or useful, consider giving the repository a ⭐ on GitHub.
+
 
