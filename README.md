@@ -1,72 +1,91 @@
 # ✈️ TravelGo India
 
-### 🇮🇳 India Moves Together. And So Do We!
+## 🇮🇳 India Moves Together. And So Do We!
 
-TravelGo India is a responsive full-stack Indian travel comparison and reservation platform built with **Next.js, React, TypeScript, Tailwind CSS, Prisma and Framer Motion**.
+TravelGo India is a full-stack Indian travel comparison and reservation platform that brings **bus, train and flight travel** into one unified experience.
 
-It helps travellers search, compare and reserve **buses, trains and flights** through a modern, responsive and easy-to-use travel experience.
+Users can search routes, compare travel options, explore destinations, select seats, complete passenger details, proceed through checkout, generate QR/PDF reservations and manage reservations from a personal dashboard.
 
 ---
 
-## 📸 Project Preview
+# 📸 Project Preview
 
-### 🏠 Homepage
+## 🏠 TravelGo Homepage
 
 ![TravelGo Homepage](./01-homepage.png)
 
-### 🗺️ India Route Explorer
+## 🗺️ India Route Explorer
 
 ![India Route Explorer](./02-india-route-explorer.png)
 
-### ⚖️ Smart Comparison
+## ⚖️ Smart Comparison
 
 ![Smart Comparison](./03-smart-comparison.png)
 
-### 🏞️ Destinations
+## 🏞️ Destinations
 
 ![TravelGo Destinations](./04-destinations.png)
 
-### 🧰 TravelGo Tools
+## 🧰 TravelGo Tools
 
 ![TravelGo Tools](./05-travelgo-tools.png)
 
 ---
 
-## ✨ Features
+# ✨ Features
 
-### 🔎 Travel Search & Comparison
+## 🔎 Travel Search & Comparison
 
-- Search buses, trains and flights
-- Compare multiple travel options
-- Compare fares, departure times and duration
-- View operator/service names
-- View fare source information
-- Filter and sort travel results
-- Responsive search experience
+TravelGo allows users to search and compare different travel options based on:
 
-### 🚌 Bus Travel
+- Source
+- Destination
+- Travel date
+- Travel type
+- Departure time
+- Arrival time
+- Duration
+- Fare
+- Availability
 
-- Bus service listings
-- Operator information
-- Departure and arrival details
-- Fare comparison
-- Seat selection flow
+The platform combines travel options into a single comparison experience.
 
-### 🚆 Train Travel
+---
 
-- Train service listings
-- Train numbers
-- Departure and arrival information
-- Fare comparison
-- Seat selection flow
+## 🚌 Bus Travel
 
-### ✈️ Flight Travel
+Bus search and comparison includes public/reference service listings such as:
 
-- Flight listings
-- Airline information
-- Flight numbers
-- Departure and arrival details
-- Fare comparison
+- Gola Bus Service
+- Laxmi Holidays Pvt Ltd
+- Metrobus
+- IntrCity SmartBus
+
+Users can compare bus fares, timings and trip information.
+
+---
+
+## 🚆 Train Travel
+
+Train travel options include public/reference listings such as:
+
+- Vande Bharat Express 22425
+- IRCTC Tejas Express 82501
+- ANVT Double Decker 12583
+- ANVT Humsafar 12571
+- KYQ BGKT Express 15624
+
+---
+
+## ✈️ Flight Travel
+
+Flight options include public/reference listings such as:
+
+- IndiGo 6E2190
+- Air India Express IX2173
+- IndiGo 6E6480
+
+---
 
 # 💺 Booking Experience
 
@@ -92,170 +111,245 @@ QR / PDF
 Dashboard
    ↓
 Cancellation
-```text
-Features include:
-Interactive seat selection
-Passenger details
-Checkout
-Reservation confirmation
-QR code generation
-PDF reservation generation
-Dashboard
-Reservation cancellation
-🗺️ Interactive India Map
-Interactive India route explorer
-Leaflet-powered map
-React Leaflet integration
-OpenStreetMap tiles
-Geographic latitude/longitude based city markers
-Route visualisation
-Bus, train and flight route differentiation
-Major destinations represented include:
-Srinagar
-Amritsar
-Delhi
-Jaipur
-Lucknow
-Varanasi
-Ahmedabad
-Kolkata
-Mumbai
-Hyderabad
-Goa
-Bengaluru
-Chennai
-Kochi
-🏞️ Destinations
+```
+
+## Features include:
+
+- Interactive seat selection
+- Passenger details
+- Checkout
+- Reservation confirmation
+- QR code generation
+- PDF reservation generation
+- Dashboard
+- Reservation cancellation
+
+---
+
+# 🗺️ Interactive India Map
+
+TravelGo includes an interactive India route explorer built with:
+
+- Leaflet
+- React Leaflet
+- OpenStreetMap
+- Geographic latitude/longitude coordinates
+
+The map provides:
+
+- Interactive India route exploration
+- Geographic city markers
+- Route visualisation
+- Bus, train and flight route differentiation
+- Zoom and map navigation
+- Route and city information
+
+### Major destinations represented include:
+
+- Srinagar
+- Amritsar
+- Delhi
+- Jaipur
+- Lucknow
+- Varanasi
+- Ahmedabad
+- Kolkata
+- Mumbai
+- Hyderabad
+- Goa
+- Bengaluru
+- Chennai
+- Kochi
+
+---
+
+# 🏞️ Destinations
 
 Explore popular Indian destinations including:
 
-Kashmir
-Goa
-Rajasthan
-Kerala
-Delhi
-Mumbai
-Bengaluru
-Chennai
-Varanasi
-Jaipur
-🏨 Travel Discovery
-Hotels
-Destination discovery
-Travel offers
-Search history
-Favourite trips
-Personal dashboard
-🛠️ Admin
-Admin dashboard
-Analytics
-Travel/search insights
-Application management features
-🔐 Authentication
-Login
-Signup
-Authentication support
-Protected application areas
-💰 Travel Data
+- Kashmir
+- Goa
+- Rajasthan
+- Kerala
+- Delhi
+- Mumbai
+- Bengaluru
+- Chennai
+- Varanasi
+- Jaipur
+
+---
+
+# 🏨 Travel Discovery
+
+TravelGo includes additional travel discovery features such as:
+
+- Hotels
+- Destination discovery
+- Travel offers
+- Search history
+- Favourite trips
+- Personal dashboard
+
+---
+
+# 🛠️ Admin
+
+The application includes an admin experience with:
+
+- Admin dashboard
+- Analytics
+- Travel insights
+- Search insights
+- Application management features
+
+---
+
+# 🔐 Authentication
+
+TravelGo supports:
+
+- Login
+- Signup
+- Authentication
+- Protected application areas
+
+---
+
+# 💰 Travel Data
 
 TravelGo uses real operator/service names and public fare/timetable snapshots where public listings were available.
 
-The Lucknow → New Delhi route includes public listing snapshots covering:
+The **Lucknow → New Delhi** route includes public listing snapshots covering:
 
-🚌 Bus
-Gola Bus Service
-Laxmi Holidays Pvt Ltd
-Metrobus
-IntrCity SmartBus
-🚆 Train
-Vande Bharat Express 22425
-IRCTC Tejas Express 82501
-ANVT Double Decker 12583
-ANVT Humsafar 12571
-KYQ BGKT Express 15624
-✈️ Flight
-IndiGo 6E2190
-Air India Express IX2173
-IndiGo 6E6480
+### 🚌 Bus
 
-Travel fares, schedules and availability can change continuously. The displayed information should therefore be treated as public/reference snapshots rather than guaranteed live inventory.
+- Gola Bus Service
+- Laxmi Holidays Pvt Ltd
+- Metrobus
+- IntrCity SmartBus
 
-🗺️ India Route Explorer
+### 🚆 Train
+
+- Vande Bharat Express 22425
+- IRCTC Tejas Express 82501
+- ANVT Double Decker 12583
+- ANVT Humsafar 12571
+- KYQ BGKT Express 15624
+
+### ✈️ Flight
+
+- IndiGo 6E2190
+- Air India Express IX2173
+- IndiGo 6E6480
+
+Travel fares, schedules and availability can change continuously. The displayed information should therefore be treated as **public/reference snapshots rather than guaranteed live inventory**.
+
+---
+
+# 🗺️ India Route Explorer
 
 The map is built using:
 
-Leaflet
-React Leaflet
-OpenStreetMap
-Geographic latitude/longitude coordinates
+- Leaflet
+- React Leaflet
+- OpenStreetMap
+- Geographic latitude/longitude coordinates
 
 Travel routes are visually differentiated by travel type:
 
-🚌 Bus
-🚆 Train
-✈️ Flight
+- 🚌 Bus
+- 🚆 Train
+- ✈️ Flight
 
 The map uses geographic coordinates rather than manually positioned screen coordinates, allowing city markers to remain aligned with their actual locations.
 
 OpenStreetMap attribution is displayed within the map interface.
 
-🎨 User Experience
+---
+
+# 🎨 User Experience
 
 TravelGo is designed around a modern Indian travel experience with:
 
-🇮🇳 Indian travel identity
-📱 Mobile-first responsive layout
-💻 Desktop support
-✨ Framer Motion animations
-⚡ Fast interactions
-🧭 Clear navigation
-🔎 Simple search
-⚖️ Easy comparison
-💺 Guided booking flow
-🎯 Clean travel-focused interface
-🧰 TravelGo Tools
+- 🇮🇳 Indian travel identity
+- 📱 Mobile-first responsive layout
+- 💻 Desktop support
+- ✨ Framer Motion animations
+- ⚡ Fast interactions
+- 🧭 Clear navigation
+- 🔎 Simple search
+- ⚖️ Easy comparison
+- 💺 Guided booking flow
+- 🎯 Clean travel-focused interface
+
+---
+
+# 🧰 TravelGo Tools
 
 The platform includes supporting travel utilities and experiences such as:
 
-Travel search
-Route exploration
-Trip comparison
-Offers
-Destination discovery
-Hotels
-Search history
-Favourite trips
-Dashboard
-Reservation management
-🛠️ Tech Stack
-Frontend
-Next.js 15
-React 19
-TypeScript
-Tailwind CSS
-Framer Motion
-Lucide React
-Backend
-Next.js API Routes
-Prisma ORM
-PostgreSQL-ready architecture
-NextAuth authentication
-Maps
-Leaflet
-React Leaflet
-OpenStreetMap
-Forms & Validation
-React Hook Form
-Zod
-Data Visualisation
-Recharts
-Documents & QR
-pdf-lib
-QRCode
-Testing
-Vitest
-Playwright
-📂 Project Structure
+- Travel search
+- Route exploration
+- Trip comparison
+- Offers
+- Destination discovery
+- Hotels
+- Search history
+- Favourite trips
+- Dashboard
+- Reservation management
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+- Next.js 15
+- React 19
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+
+## Backend
+
+- Next.js API Routes
+- Prisma ORM
+- PostgreSQL-ready architecture
+- NextAuth authentication
+
+## Maps
+
+- Leaflet
+- React Leaflet
+- OpenStreetMap
+
+## Forms & Validation
+
+- React Hook Form
+- Zod
+
+## Data Visualisation
+
+- Recharts
+
+## Documents & QR
+
+- pdf-lib
+- QRCode
+
+## Testing
+
+- Vitest
+- Playwright
+
+---
+
+# 📂 Project Structure
+
+```text
 travelgo-india/
 │
 ├── app/
@@ -300,65 +394,114 @@ travelgo-india/
 ├── next.config.ts
 ├── package.json
 └── README.md
-🚀 Run Locally
-1. Clone the repository
+```
+
+---
+
+# 🚀 Run Locally
+
+## 1. Clone the repository
+
+```bash
 git clone https://github.com/abhishek-mishra16/Travelgo.git
-2. Enter the project directory
+```
+
+## 2. Enter the project directory
+
+```bash
 cd Travelgo
-3. Install dependencies
+```
+
+## 3. Install dependencies
+
+```bash
 npm install
-4. Configure environment variables
+```
+
+## 4. Configure environment variables
 
 Create a local environment file:
 
+```text
 .env.local
+```
 
 Configure the required environment variables for your local setup.
 
-Do not commit .env.local to GitHub.
+**Do not commit `.env.local` to GitHub.**
 
-5. Start the development server
+## 5. Start the development server
+
+```bash
 npm run dev
-6. Open the application
+```
+
+## 6. Open the application
+
+```text
 http://localhost:3000
-🧪 Testing
-Run the test suite
+```
+
+---
+
+# 🧪 Testing
+
+## Run the test suite
+
+```bash
 npm test
-Create a production build
+```
+
+## Create a production build
+
+```bash
 npm run build
-Start the application locally
+```
+
+## Start the application locally
+
+```bash
 npm run dev
-🔌 API Architecture
+```
+
+---
+
+# 🔌 API Architecture
 
 TravelGo uses server-side API routes for application functionality including:
 
-Search
-Trips
-Seats
-Bookings
-Payments
-Offers
-Favourites
-Search history
-Authentication
-Admin analytics
-PDF generation
-Cancellation
+- Search
+- Trips
+- Seats
+- Bookings
+- Payments
+- Offers
+- Favourites
+- Search history
+- Authentication
+- Admin analytics
+- PDF generation
+- Cancellation
 
 The architecture is designed so authorised third-party travel provider APIs can be integrated later without replacing the customer-facing booking experience.
 
-🔐 Security
+---
+
+# 🔐 Security
 
 The project follows common application security practices including:
 
-Environment variables for secrets
-.env.local excluded from Git
-Server-side API routes
-Authentication support
-Input validation with Zod
-Prisma database layer
-No payment credentials stored in the repository
-📊 Data & Reservation Disclaimer
+- Environment variables for secrets
+- `.env.local` excluded from Git
+- Server-side API routes
+- Authentication support
+- Input validation with Zod
+- Prisma database layer
+- No payment credentials stored in the repository
+
+---
+
+# 📊 Data & Reservation Disclaimer
 
 Public travel websites continuously change fares, schedules and availability.
 
@@ -366,16 +509,19 @@ TravelGo does not scrape or bypass provider systems.
 
 The current application uses public/reference travel data and website reservation logic.
 
-The checkout creates a TravelGo website reservation. It does not submit an actual ticket purchase to IRCTC, an airline or a bus operator, and it does not issue an operator ticket.
+The checkout creates a **TravelGo website reservation**. It does not submit an actual ticket purchase to IRCTC, an airline or a bus operator, and it does not issue an operator ticket.
 
 For production-grade live search, live seat availability and real ticket booking, authorised provider APIs would need to be connected.
 
-🌐 Deployment
+---
+
+# 🌐 Deployment
 
 TravelGo is designed for modern Next.js hosting environments.
 
 A typical production architecture can use:
 
+```text
 Next.js
    +
 PostgreSQL
@@ -385,17 +531,22 @@ Prisma
 Environment Variables
    +
 Authorised Travel APIs
+```
 
 Before production deployment, configure the required:
 
-Database
-Authentication
-Environment variables
-Authorised travel provider integrations
-💡 Why TravelGo?
+- Database
+- Authentication
+- Environment variables
+- Authorised travel provider integrations
+
+---
+
+# 💡 Why TravelGo?
 
 TravelGo combines multiple parts of the Indian travel journey into one platform:
 
+```text
 Discover
    +
 Search
@@ -407,38 +558,50 @@ Choose
 Reserve
    +
 Manage
+```
 
 Instead of switching between multiple travel websites, users can explore travel options through a single unified interface.
 
-⭐ Project Highlights
-Full-stack Next.js application
-TypeScript-based development
-Responsive modern UI
-Interactive India map
-Bus + Train + Flight comparison
-End-to-end reservation flow
-Seat selection
-QR/PDF generation
-Authentication
-Dashboard
-Admin analytics
-API-ready architecture
-PostgreSQL + Prisma ready
-Automated testing support
-Production-oriented project structure
-👨‍💻 Author
-Abhishek Mishra
+---
 
-GitHub:
+# ⭐ Project Highlights
+
+- Full-stack Next.js application
+- TypeScript-based development
+- Responsive modern UI
+- Interactive India map
+- Bus + Train + Flight comparison
+- End-to-end reservation flow
+- Seat selection
+- QR/PDF generation
+- Authentication
+- Dashboard
+- Admin analytics
+- API-ready architecture
+- PostgreSQL + Prisma ready
+- Automated testing support
+- Production-oriented project structure
+
+---
+
+# 👨‍💻 Author
+
+## Abhishek Mishra
+
+### GitHub
 
 https://github.com/abhishek-mishra16
 
-Repository:
+### Repository
 
 https://github.com/abhishek-mishra16/Travelgo
 
-⭐ Support the Project
+---
+
+# ⭐ Support the Project
 
 If you find TravelGo India interesting or useful, consider giving the repository a ⭐ on GitHub.
 
+---
 
+## 🇮🇳 India Moves Together. And So Do We!
