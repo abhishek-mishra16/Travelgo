@@ -1,0 +1,1 @@
+import {NextResponse} from 'next/server';import {DEMO_CITIES} from '@/lib/demo-data';export async function GET(req:Request){const q=new URL(req.url).searchParams.get('q')?.toLowerCase()||'';return NextResponse.json({cities:DEMO_CITIES.filter(c=>c.name.toLowerCase().includes(q)).slice(0,10)})}

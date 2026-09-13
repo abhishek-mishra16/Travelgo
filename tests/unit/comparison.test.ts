@@ -1,0 +1,3 @@
+import {describe,it,expect} from 'vitest';import {compareTrips} from '@/lib/comparison';import {Trip} from '@/lib/types';
+const t=(id:string,type:Trip['type'],price:number,durationMinutes:number,rating:number):Trip=>({id,type,operator:type,origin:'A',originCode:'A',destination:'B',destinationCode:'B',departure:'2026-09-13T06:00:00Z',arrival:'2026-09-13T08:00:00Z',durationMinutes,price,rating,stops:0,amenities:[],cancellationPolicy:'demo',seatsAvailable:10});
+describe('comparison engine',()=>{it('finds cheapest and fastest',()=>{const c=compareTrips([t('b','BUS',500,500,4),t('t','TRAIN',700,400,4.8),t('f','FLIGHT',3000,90,4.3)])!;expect(c.cheapest.id).toBe('b');expect(c.fastest.id).toBe('f');expect(c.bestValue).toBeTruthy()})});

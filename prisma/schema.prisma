@@ -1,0 +1,170 @@
+generator client { provider = "prisma-client-js" }
+
+datasource db { provider = "postgresql" url = env("DATABASE_URL") }
+
+enum Role { USER ADMIN }
+enum LocationType { CITY STATION AIRPORT }
+enum TransportType { BUS TRAIN FLIGHT }
+enum SeatStatus { AVAILABLE SELECTED OCCUPIED RESERVED }
+enum BookingStatus { PENDING CONFIRMED CANCELLED }
+enum PaymentStatus { PENDING SUCCESS FAILED REFUND_SIMULATED }
+
+model User {
+  id String @id @default(cuid())
+  name String
+  email String @unique
+  passwordHash String
+  role Role @default(USER)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  bookings Booking[]
+  favorites Favorite[]
+  searches SearchHistory[]
+}
+
+model Location {
+  id String @id @default(cuid())
+  name String
+  state String
+  code String @unique
+  type LocationType
+  latitude Float
+  longitude Float
+  originTrips Trip[] @relation("origin")
+  destinationTrips Trip[] @relation("destination")
+}
+
+model TransportOperator {
+  id String @id @default(cuid())
+  name String
+  type TransportType
+  rating Float @default(4.2)
+  trips Trip[]
+}
+
+model Trip {
+  id String @id @default(cuid())
+  operatorId String
+  originId String
+  destinationId String
+  type TransportType
+  departure DateTime
+  arrival DateTime
+  durationMinutes Int
+  price Int
+  rating Float
+  stops Int @default(0)
+  amenities String
+  cancellationPolicy String
+  baggage String?
+  operator TransportOperator @relation(fields: [operatorId], references: [id])
+  origin Location @relation("origin", fields: [originId], references: [id])
+  destination Location @relation("destination", fields: [destinationId], references: [id])
+  seats Seat[]
+  bookings Booking[]
+  reviews Review[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([originId, destinationId, departure])
+  @@index([type])
+}
+
+model Seat {
+  id String @id @default(cuid())
+  tripId String
+  label String
+  status SeatStatus @default(AVAILABLE)
+  trip Trip @relation(fields: [tripId], references: [id], onDelete: Cascade)
+  bookingSeats BookingSeat[]
+  @@unique([tripId, label])
+}
+
+model Booking {
+  id String @id @default(cuid())
+  bookingCode String @unique
+  userId String
+  tripId String
+  status BookingStatus @default(PENDING)
+  total Int
+  couponCode String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  user User @relation(fields: [userId], references: [id])
+  trip Trip @relation(fields: [tripId], references: [id])
+  passengers Passenger[]
+  seats BookingSeat[]
+  payment Payment?
+}
+
+model BookingSeat {
+  id String @id @default(cuid())
+  bookingId String
+  seatId String
+  booking Booking @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  seat Seat @relation(fields: [seatId], references: [id])
+  @@unique([bookingId, seatId])
+  @@unique([seatId, bookingId])
+}
+
+model Passenger {
+  id String @id @default(cuid())
+  bookingId String
+  fullName String
+  age Int
+  gender String
+  email String
+  phone String
+  booking Booking @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+}
+
+model Payment {
+  id String @id @default(cuid())
+  bookingId String @unique
+  amount Int
+  method String
+  status PaymentStatus @default(PENDING)
+  transactionRef String?
+  createdAt DateTime @default(now())
+  booking Booking @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+}
+
+model Favorite {
+  id String @id @default(cuid())
+  userId String
+  tripId String?
+  routeKey String?
+  destination String?
+  createdAt DateTime @default(now())
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@unique([userId, tripId])
+}
+
+model SearchHistory {
+  id String @id @default(cuid())
+  userId String
+  fromCode String
+  toCode String
+  travelDate DateTime
+  travellers Int @default(1)
+  createdAt DateTime @default(now())
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Review {
+  id String @id @default(cuid())
+  tripId String
+  authorName String
+  rating Float
+  comment String
+  trip Trip @relation(fields: [tripId], references: [id], onDelete: Cascade)
+}
+
+model Coupon {
+  id String @id @default(cuid())
+  code String @unique
+  type String
+  value Int
+  minAmount Int @default(0)
+  active Boolean @default(true)
+  expiresAt DateTime?
+}

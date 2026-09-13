@@ -1,0 +1,1 @@
+import {NextResponse} from 'next/server';export async function GET(){return NextResponse.json({offers:[{code:'FIRSTTRIP',title:'10% OFF your first booking',value:'10%'},{code:'WEEKEND',title:'₹300 OFF on eligible fares',value:'₹300'},{code:'TRAIN50',title:'₹50 OFF selected train trips',value:'₹50'}]})}

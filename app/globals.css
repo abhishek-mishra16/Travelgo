@@ -1,0 +1,18 @@
+@import 'leaflet/dist/leaflet.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{--navy:#082B4C;--orange:#FF5A1F;--green:#0B8F5A;--sky:#EAF6FF}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f7fbff;color:var(--navy);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.container-x{width:min(1180px,calc(100% - 32px));margin:auto}.hero{min-height:590px;background:#b8e1ef}.hero-image{background-image:url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=2200&q=90');background-size:cover;background-position:center 38%}.hero-overlay{background:linear-gradient(90deg,rgba(3,28,50,.93) 0%,rgba(4,46,76,.78) 42%,rgba(4,46,76,.28) 78%,rgba(4,46,76,.1) 100%),linear-gradient(180deg,rgba(8,43,76,.15),rgba(8,43,76,.38))}.hero-shape{pointer-events:none}.search-panel{transform:translateY(0)}.field-card{position:relative;display:block;min-height:76px;border:1px solid #e5eaf0;border-radius:18px;background:#fff;padding:13px 12px 9px 40px}.field-icon{position:absolute;left:13px;top:25px;color:var(--orange)}.field-icon svg{height:18px;width:18px}.field-label{display:block;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;color:#94a3b8}.form-control{margin-top:5px;width:100%;background:transparent;font-size:13px;font-weight:900;outline:none;color:var(--navy)}.script-kicker{font-family:"Brush Script MT","Segoe Script",cursive;font-size:29px;font-weight:700;color:var(--navy)}.shadow-soft{box-shadow:0 20px 60px rgba(8,43,76,.12)}.glass{background:rgba(255,255,255,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}.scrollbar-hide::-webkit-scrollbar{display:none}.scrollbar-hide{scrollbar-width:none}@media(max-width:700px){.container-x{width:min(100% - 20px,1180px)}.hero{min-height:720px}.hero-image{background-position:center}.hero-overlay{background:linear-gradient(180deg,rgba(3,28,50,.9),rgba(4,46,76,.72))}.search-panel{margin-bottom:0}.field-card{min-height:70px}.script-kicker{font-size:24px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+.travelgo-map-label{border:0!important;border-radius:999px!important;box-shadow:0 4px 14px rgba(8,43,76,.12)!important;color:#082b4c!important;font-weight:800!important;font-size:10px!important;padding:4px 8px!important;background:rgba(255,255,255,.96)!important}.travelgo-map-label:before{border-top-color:rgba(255,255,255,.96)!important}.leaflet-container{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+
+/* TravelGo visual polish */
+@keyframes travelgo-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes travelgo-shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+.reveal-soft{animation:travelgo-fade .7s ease both}
+@keyframes travelgo-fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.travelgo-glow{box-shadow:0 18px 55px rgba(8,43,76,.12)}
+.search-panel:hover{box-shadow:0 28px 80px rgba(8,43,76,.22)}
+.hero .script-kicker{animation:travelgo-float 5s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.reveal-soft,.hero .script-kicker{animation:none!important}}

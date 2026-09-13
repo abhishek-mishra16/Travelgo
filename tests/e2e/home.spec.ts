@@ -1,0 +1,1 @@
+import {test,expect} from '@playwright/test';test('homepage search flow starts',async({page})=>{await page.goto('/');await expect(page.getByText('India Moves Together')).toBeVisible();await page.getByRole('button',{name:/Search Trips/}).click();await expect(page).toHaveURL(/search\?/);});

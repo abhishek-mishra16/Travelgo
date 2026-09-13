@@ -1,0 +1,10 @@
+node_modules
+.next
+.env
+.env.local
+coverage
+playwright-report
+test-results
+prisma/*.db
+.DS_Store
+*.log
