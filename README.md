@@ -92,8 +92,8 @@ QR / PDF
 Dashboard
    ↓
 Cancellation
-Features include:
 
+Features include:
 Interactive seat selection
 Passenger details
 Checkout
