@@ -93,7 +93,7 @@ Dashboard
    ↓
 Cancellation
 
-Features include:
+##Features include:
 Interactive seat selection
 Passenger details
 Checkout
@@ -102,7 +102,8 @@ QR code generation
 PDF reservation generation
 Dashboard
 Reservation cancellation
-🗺️ Interactive India Map
+
+### 🗺️ Interactive India Map
 Interactive India route explorer
 Leaflet-powered map
 React Leaflet integration
